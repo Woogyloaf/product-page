@@ -1,0 +1,89 @@
+
+.product
+	h1 NAUTICAL T-SHIRT
+	.image-thumbnail
+		img(src="../images/1.jpg")
+	form
+		.params
+			.color
+				.text	Color
+				.block.radio-color
+						input#color-white(type='radio' name='color' value='color-white' checked="checked")
+						label.color-white(for='color-white') Color White
+						input#color-light-blue(type='radio' name='color' value='color-light-blue')
+						label.color-light-blue(for='color-light-blue') Light blue
+						input#color-light-violet(type='radio' name='color' value='color-light-violet')
+						label.color-light-violet(for='color-light-violet') Light violet
+						input#color-light-pink(type='radio' name='color' value='color-light-pink')
+						label.color-light-pink(for='color-light-pink') Light violet
+			.size
+				.text Size
+				.block
+					.style-select
+						select
+							option(selected disabled style="display:none") SELECT ONEA
+							option(value="option-1") Option #1
+							option(value="option-2") Option #2
+							option(value="option-3") Option #3
+							option(value="option-4") Option #4
+	
+			.quantity
+				.text Quantity
+				.block
+					.style-select
+						select
+							//- option(selected disabled style="display:none") 2
+							option(value="1") 1
+							option(value="2" selected) 2
+							option(value="3") 3
+							option(value="4") 4
+		<div class="hr"><hr /></div>
+		h4 Availability:
+			span.asd  In stock
+		p.price <span>$37.59</span>$30.00
+		input(type="submit" value="Add to cart")
+		div(class="hr")<hr />
+		.social-media
+			p.share SHARE:
+			a(href="#facebook").facebook FB
+			a(href="#twitter").twitter TW
+			a(href="#google-plus").google-plus G+
+			a(href="#pinterest").pinterest Pin
+	<div class="hr hidden"><hr /></div>
+
+	.product-description
+		h2 Nautical print T-shirt
+		p.code TH3863-00
+		p.s-description An anchor and marine flags accent the chest of this nautical-inspired Lacoste T-shirt. A comfortable piece perfect for urban adventures.
+		button.read-more(ng-click="showDetails = ! showDetails" ng-hide="showDetails") Read more
+		.procedure-details(ng-show='showDetails')
+			ul
+				li Regular fit
+				li Crew neck
+				li Lacoste Yachting branding on chest
+				li Other
+				li Round neck
+				li COTTON (100%)
+
+	
+
+		<div class="hr"><hr /></div>
+		.social-media
+			a(href="#facebook").facebook FB
+			a(href="#twitter").twitter TW
+			a(href="#google-plus").google-plus G+
+			a(href="#pinterest").pinterest Pin
+
+	.product-slider
+		div.img-slider
+			img(src="../images/2.jpg")
+		div
+			img(src="../images/3.jpg")
+		div
+			img(src="../images/4.jpg")
+		div
+			img(src="../images/2.jpg")
+		div
+			img(src="../images/3.jpg")
+		div
+			img(src="../images/4.jpg")

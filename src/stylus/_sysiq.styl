@@ -1,0 +1,361 @@
+html, body
+	font-family $open-sans
+	box-sizing: border-box;
+	
+.product
+	width 320px
+	padding 20px
+	margin 0 auto
+	outline none
+	button 
+		outline none
+		+mqDevice($table)
+			display block
+		+mqDevice($desktop)
+			display block
+	+mqDevice($table)
+		width 768px
+		
+		.share
+			display none
+		.hidden
+			display none
+		.product-description h2, .product-description p.code
+			padding-top 23px
+			clear left
+	+mqDevice($desktop)
+		width 1024px
+		.hidden
+			display none
+	hr
+		margin 0
+	h1
+		font-size 24px
+		font-weight 400
+	.image-thumbnail
+			border 1px solid #e8e8e8
+			background-size contain
+			background-repeat no-repeat
+			background-position center center
+			display block
+			background #fff
+			height 180px
+			overflow hidden
+			+mqDevice($table)
+				width 460px
+				height 300px
+				float left
+			+mqDevice($desktop)
+				width 650px
+				height 420px
+				float left
+	.slick-track
+		.slick-slide
+			outline none
+
+//////////////////////////
+// Products
+//////////////////////////
+.params
+	padding-top 25px
+	+mqDevice($table)
+		padding-top 0
+	.text
+		height 40px
+		line-height 40px
+		width 85px
+		// background olive
+		float left
+		font-size 15px
+		font-weight 600
+		+mqDevice($table)
+			line-height normal
+			height auto
+	.block
+		height 40px
+		+mqDevice($table)
+			clear both
+.color-white
+.color-light-blue
+.color-light-violet
+.color-light-pink
+	width 40px
+	height 40px
+	// border 1px solid #f09
+	display inline-block
+	font-size 0px
+	box-sizing border-box
+	&.active
+		border 2px solid #d2d2d2
+		
+.color-white
+	background white
+.color-light-blue
+	background #add4eb
+.color-light-violet
+	background #bbafd9
+.color-light-pink
+	background #ebadc3
+.color
+	.block
+		width 195px
+		display flex
+		justify-content space-between
+		+mqDevice($table)
+			width 220px
+.block
+	select
+		height 40px
+		width 195px
+		color #646464
+		background none
+.color
+.size
+.quantity
+	margin-bottom 25px
+	+mqDevice($desktop)
+		margin-bottom 30px
+		display: flex;
+		align-items: center;
+	// width 320px
+.social-media
+		margin 17px
+		text-align center
+		a
+			display inline-block
+			text-decoration none
+			margin-right 15px
+form
+	.block
+		width 195px
+		display flex
+		justify-content space-between
+		+mqDevice($table)
+			width 220px
+
+	.social-media
+		display none
+	+mqDevice($table)
+		width 268px
+		display block
+		float right
+		padding-left 25px
+		hr
+			width 220px
+	+mqDevice($desktop)
+		hr
+			width 302px
+		.social-media
+			display block
+	+mqDevice($desktop)
+		width 334px
+		float right
+		padding-left 30px
+		.social-media
+			display block
+			display flex
+			align-items center
+			.share
+				margin-right 15px
+				display block
+				+mqDevice($table)
+					display none
+				+mqDevice($mobile)
+					display none
+	h4	
+		text-transform uppercase
+		font-size 14px
+		font-weight 600
+		color #4c4c4c
+		margin-top 23px
+		margin-bottom 0px
+			+mqDevice($desktop)
+				margin-top 28px
+		span
+			color #f3546a
+	p.price
+		font-size 36px
+		color #272727
+		font-weight 600
+		margin-top 20px
+		margin-bottom 0px
+		display -moz-inline-box
+		
+		+mqDevice($mobile)
+			span
+				display none
+		+mqDevice($desktop)
+			color #f3546a
+			span
+				margin-right 30px
+				color #c8c8c8
+				display inline-block
+				text-decoration: line-through;
+		
+	input[type="submit"]
+		width 280px
+		height 50px
+		margin-top 20px
+		margin-bottom 25px
+		background none
+		border 3px solid #464646
+		font-size 14px
+		font-weight 600
+		text-transform uppercase
+		outline none
+		+mqDevice($table)
+			width 220px
+	.style-select
+		width 195px
+		float left
+		// background-position 90 position
+		// background url("http://www.scottgood.com/jsg/blog.nsf/images/arrowdown.gif") no-repeat 95% 50%;
+		background url("../images/input-arrow.png") no-repeat;
+		position relative
+		background-position 174px 17px
+		+mqDevice($table)
+			width 220px
+			background-position 194px 17px
+		select
+			padding-left 10px
+			height 40px
+			width 195px
+			color #646464
+			background none
+			box-shadow none
+			background-color transparent
+			background-image none
+			appearance none
+			border 1px solid #969696
+			&:focus 
+				outline: none
+			+mqDevice($table)
+				width 220px
+
+.product-description
+	letter-spacing 1.5px
+	margin-bottom 62px
+	+mqDevice($desktop)
+		width 500px
+		clear left
+		margin-top -50px
+		hr
+			display none
+	.social-media
+		+mqDevice($table)
+			display none
+		+mqDevice($desktop)
+			display none
+			div hr
+				display none
+				
+	h2
+		font-weight bold
+		margin-top 23px
+		margin-bottom 0px
+	h2
+	p.code
+		color #1a1a1a
+		font-size 16px
+	p.code
+		margin-top 4px
+		margin-bottom 0px
+	p.s-description
+		font-size 13px
+		color #1a1a1a
+		line-height 18px
+		margin-top 15px
+		margin-bottom 0px
+
+	ul
+		padding 0
+		margin-top 7px
+.facebook
+.twitter
+.pinterest
+.google-plus
+	color transparent
+.facebook
+	sprite($s-facebook)
+.twitter
+	sprite($s-twitter)
+.pinterest
+	sprite($s-pinterest)
+.google-plus
+	sprite($s-google-plus)
+
+//////////////////////////
+// Product Slider
+//////////////////////////
+.product-slider
+	outline none
+	.slick-slide
+		img
+			margin-right 39px
+	.img-slider
+		.box-info
+			left 0px
+			top 20px
+			right 0px
+			bottom 0px
+			background rgba(0, 0, 0, .3)
+			position absolute
+			margin-right 0
+			text-align center
+	button
+		top 50%
+		position absolute
+		z-index 2
+		transform translate(-50%, -50%)
+		border none
+		color transparent
+		outline none
+		background transparent
+		&.slick-prev
+			left 21px
+			sprite($s-slider_arrow_prev_320)
+			// background #f09 url('') position repeat
+		&.slick-next
+			right 12px
+			sprite($s-slider_arrow_next_320)
+.read-more
+	color #191919;
+	text-transform uppercase
+	border none
+	text-align left
+	border-top 3px solid #191919
+	padding-top 10px
+	background none
+	width 98px
+	font-size 10px
+	display block
+	position relative
+	margin-top 30px
+	&:after
+		content url(../images/input-arrow.png)
+		margin-right value
+		position absolute 
+		right 0px
+		bottom 3px
+	+mqDevice($table)
+		display block
+	+mqDevice($mobile)
+		display none
+		.procedure-details 
+			display block
+
+
+.radio-color
+	input[type="radio"]
+		display none
+ 	label
+		display inline-block
+		background-color #ddd
+		padding 4px 11px
+		font-family Arial
+		font-size 16px
+	input[type="radio"]:checked
+		& + label
+			display inline-block
+			box-sizing border-box
+			border 2px solid #d2d2d2
